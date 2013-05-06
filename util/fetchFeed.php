@@ -30,7 +30,8 @@ while(true)
 
 	foreach($data as $kill)
 	{
-		unset($kill->_stringValue);
+		if(isset($kill->_stringValue))
+			unset($kill->_stringValue);
 
 		$hash = Util::getKillHash(null, $kill);
 		$json = json_encode($kill);
