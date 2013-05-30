@@ -51,7 +51,7 @@ class cli_hourly implements cliCommand
 		$p["corporationID"] = $boardCorpId;
 
 		Db::execute("analyze table zz_participants");
-		Storage::store("Top3dayChars", json_encode(Info::doMakeCommon("Top Characters - Last 30 Days", "characterID", Stats::getTopPilots($p))));
+		Cache::set("zKBTop3dayChars", json_encode(Info::doMakeCommon("Top Characters - Last 30 Days", "characterID", Stats::getTopPilots($p))), 4200);
 		Primer::cachePrimer();
 	}
 

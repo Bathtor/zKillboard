@@ -30,7 +30,7 @@ $topPointList = Stats::getTopPoints("killID", array("losses" => true, "pastSecon
 $topPoints = Kills::getKillsDetails($topPointList);
 
 $top = array();
-$top[] = json_decode(Storage::retrieve("Top3dayChars"), true);
+$top[] = json_decode(Cache::get("zKBTop3dayChars"), true);
 
 $app->etag(md5(serialize($top)));
 $app->expires("+5 minutes");
