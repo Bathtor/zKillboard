@@ -37,8 +37,8 @@ $fullAddr = "http://" . $baseAddr;
 chdir($baseDir);
 
 // CorpKB settings
-$boardCorpId = "517110379";       // Corp ID for corp-centric zKB
-$boardDefaultSubdomain = "mtl";   // Default subdomain if hit with no/unknown subdomain. Remember, you have to create that subdomain yourself.
+$boardCorpId = "98198081";       // Corp ID for corp-centric zKB
+$boardDefaultSubdomain = "kb";   // Default subdomain if hit with no/unknown subdomain. Remember, you have to create that subdomain yourself.
 $boardDisablePost = true;         // Disables the post page
 $boardDisableRegister = true;     // Disables the register page
 $boardUUID = "%uuid%";
